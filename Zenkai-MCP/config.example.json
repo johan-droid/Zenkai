@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "zenkai-vault": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--project",
+        "/absolute/path/to/Zenkai/Zenkai-MCP",
+        "zenkai-vault-mcp"
+      ],
+      "env": {
+        "ZENKAI_VAULT_PATH": "/absolute/path/to/Zenkai/Zenkai-Vault"
+      }
+    }
+  }
+}

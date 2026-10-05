@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zenkai-vault-mcp"
+version = "0.1.0"
+description = "Filesystem-backed MCP server for the Zenkai Obsidian vault"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp>=1.9,<2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8,<9",
+    "ruff>=0.6,<1",
+]
+
+[project.scripts]
+zenkai-vault-mcp = "zenkai_vault_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["zenkai_vault_mcp*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": ["AGENTS.md"],
+  "mcp": {
+    "zenkai-vault": {
+      "type": "local",
+      "command": ["uv", "run", "zenkai-vault-mcp"],
+      "cwd": "Zenkai-MCP",
+      "enabled": true,
+      "environment": {
+        "ZENKAI_VAULT_PATH": "../Zenkai-Vault"
+      }
+    }
+  }
+}
